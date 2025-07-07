@@ -1,0 +1,25 @@
+{
+  "name": "title",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./build/index.js",
+  "type": "module",
+  "bin": {
+    "title": "./build/index.js"
+  },
+  "scripts": {
+    "build": "tsc && node -e \"try{require('fs').chmodSync('build/index.js', 0o755)}catch(e){}\""
+  },
+  "files": [
+    "build"
+  ], 
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.8.0",
+    "cheerio": "^1.1.0",
+    "zod": "^3.24.2"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.17",
+    "typescript": "^5.8.2"
+  }
+}
