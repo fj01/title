@@ -15,6 +15,7 @@ async function getHtmlTitle(url) {
     return $('title').text();
 }
 ;
+
 /*
 server.tool(
   "title",
@@ -27,6 +28,7 @@ server.tool(
   )
 );
 */
+
 server.tool("title", "与えられたURLのタイトルを返す", {
     url: z.string().describe("URL")
 }, async ({ url }) => {
